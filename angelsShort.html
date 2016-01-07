@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="calculatingStuff.js"></script>
+<link rel="stylesheet" type="text/css" href="angels.css">
+</head>
+
+<body style="background-color: #464848">
+
+<div class="clearfix" id="top">
+	<img id='title' src="title1.jpg"/>
+	<div id="theAngels"></div>
+</div>
+
+<div id="rankedProjects"></div>
+
+<div class="clearfix" id="buttom">
+<img id='logos' src="logos.png">
+
+<button type="button" id = "rank">Show next result</button>
+<button type="button" id = "winners">Show the winners</button>
+
+<script>
+ document.getElementById("rank").addEventListener('click', showNextGrant, false);
+ document.getElementById("winners").addEventListener('click', showWinners, false);
+</script>
+
+</body>
+</html>

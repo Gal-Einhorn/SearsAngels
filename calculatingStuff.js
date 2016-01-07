@@ -53,12 +53,31 @@ function showProjects(){
            $('#lines' + project).append('<div class="theLines"/>');
         }
     }
+    if (projects.length>9){
+      $('.projectTytle').css({
+        "font-size" : "15px",
+        "padding-top" : "1.5%",
+      })
+      $('.projectNames').css({
+        "height":"4.75%",
+      })
+      $('.grantsBar').css({
+        "height":"5.25%"
+      })
+      $('.grantAmountSum').css({
+        "padding-top": "2.3%"
+      })
+      $('.projectSum').css({
+        "padding-top": "0%"
+      })
+    }
 }
 
 function showAngels(){
   for (var angelId=0; angelId<angels.length; angelId++){
     $('#theAngels').append('<div class = "angels" id="angel' + angelId +'">');
-    $('#angel' + angelId).append('<img class="angelImage" id="angelImage' + angelId + '" src="angel' +angelId + '.jpg"/>');
+    $('#angel' + angelId).append('<img class="angelImage" id="angelImage' + angelId + '" src="angel' +angelId + '.PNG"/>');
+  //$('#angel' + angelId).append('<img class="angelImage" id="angelImage' + angelId + '" src='+angels[angelId].pictureUrl +'/>');
     $('#angelImage' + angelId).css({"border-color" : angels[angelId].color});
     $('#angel' + angelId).append('<div class="names" id="angelFirstName' + angelId + '">' + angels[angelId].firstName +'</div>');
     $('#angel' + angelId).append('<div class="names" id="angelLasttName' + angelId + '">' + angels[angelId].lastName +'</div></div>');
@@ -67,7 +86,7 @@ function showAngels(){
 
 function calculateMaxGrant(){
   rankProjects();
-  totalMax = balance[5].balance + 5000;
+  totalMax = balance[balance.length].balance + 5000;
   initiateBalance();
 }
 
